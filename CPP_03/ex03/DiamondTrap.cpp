@@ -64,7 +64,7 @@ std::string	DiamondTrap::get_name(void) const
 	return (name);
 }
 
-DiamondTrap::DiamondTrap(const DiamondTrap &other)
+DiamondTrap::DiamondTrap(const DiamondTrap &other): ClapTrap(other.get_name() + "_clap_name"), ScavTrap(other.get_name()), FragTrap(other.get_name())
 {
 	this->energy = other.energy;
 	this->hit_points = other.hit_points;

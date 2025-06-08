@@ -33,7 +33,7 @@ ScavTrap::~ScavTrap()
 	std::cout << "ScavTrap Destructor called for " << name << " ScavTrap" << std::endl;
 }
 
-ScavTrap::ScavTrap(const ScavTrap &other)
+ScavTrap::ScavTrap(const ScavTrap &other): ClapTrap(other.get_name())
 {
 	std::cout << "ScavTrap copy constructor called for " << name << " ScavTrap" << std::endl;
 	this->energy = other.energy;

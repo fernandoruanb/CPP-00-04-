@@ -33,7 +33,7 @@ FragTrap::~FragTrap(void)
 	std::cout << "FragTrap destructor called for " << name << " FragTrap" << std::endl;
 }
 
-FragTrap::FragTrap(const FragTrap &other)
+FragTrap::FragTrap(const FragTrap &other): ClapTrap(other.get_name())
 {
 	std::cout << "FragTrap copy constructor called for " << name << " FragTrap" << std::endl;
 	this->name = other.name;
